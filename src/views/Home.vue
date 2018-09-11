@@ -1,18 +1,34 @@
 <template>
+<div>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header /> 
+    <Navigate />
   </div>
+    <BubbleData />
+    </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Header from "@/components/Header"
+import Navigate from "@/components/Navigate"
+import BubbleData from "@/components/BubbleData"
+
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    Header,
+    Navigate,
+    BubbleData
   }
+  
 }
 </script>
+
+<style>
+  .home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+  }
+</style>
